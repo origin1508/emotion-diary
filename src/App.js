@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Diary";
 import Home from "./pages/Home";
@@ -17,20 +17,6 @@ function App() {
           <Route path="/edit" element={<Edit />} />
         </Routes>
       </div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/diary">Diary</Link>
-        </li>
-        <li>
-          <Link to="/new">New</Link>
-        </li>
-        <li>
-          <Link to="/edit">Edit</Link>
-        </li>
-      </ul>
     </BrowserRouter>
   );
 }
