@@ -14,7 +14,7 @@ const reducer = (state, action) => {
       return action.data;
     }
     case "CREATE": {
-      newState = [...action.data, ...state];
+      newState = [{ ...action.data }, ...state];
       break;
     }
     case "REMOVE": {
@@ -30,7 +30,8 @@ const reducer = (state, action) => {
     default:
       return state;
   }
-  return state;
+
+  return newState;
 };
 
 export const DiaryStateContext = createContext();
@@ -107,7 +108,7 @@ function App() {
 
   return (
     <DiaryStateContext.Provider value={data}>
-      <DiaryDispatchContect.Provider value={(onCreate, onEdit, onRemove)}>
+      <DiaryDispatchContect.Provider value={{ onCreate, onEdit, onRemove }}>
         <BrowserRouter>
           <div className="App">
             <Routes>
