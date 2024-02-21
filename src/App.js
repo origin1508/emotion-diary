@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Diary";
 import Home from "./pages/Home";
-import New from "./pages/Diary";
+import New from "./pages/New";
 import "./App.css";
 
 const reducer = (state, action) => {
