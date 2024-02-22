@@ -1,7 +1,7 @@
 import { createContext, useReducer, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Diary from "./pages/Diary";
-import Edit from "./pages/Diary";
+import Edit from "./pages/Edit";
 import Home from "./pages/Home";
 import New from "./pages/New";
 import "./App.css";
@@ -115,7 +115,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/diary/:id" element={<Diary />} />
               <Route path="/new" element={<New />} />
-              <Route path="/edit" element={<Edit />} />
+              <Route path="/edit/:id" element={<Edit />} />
             </Routes>
           </div>
         </BrowserRouter>
